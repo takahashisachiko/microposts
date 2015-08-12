@@ -9,6 +9,13 @@
         </p>
       </h1>
       <p>
+        <%= link_to "Following" , following_user_path %> <%= @user.following_users.count %>
+      </p>
+      <p>
+        <%= link_to "Follower" , follower_user_path %> <%= @user.follower_users.count %>
+      </p>
+
+      <p>
         <%= @user.age %> 歳
       </p>
       <p>
