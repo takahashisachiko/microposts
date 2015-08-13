@@ -1,0 +1,36 @@
+    <section>
+      <h1>
+        <%= gravatar_for @user %>
+        <p>
+          <%= @user.name %>
+        </p>
+      </h1>
+      <div class="row" id="user_data">
+        <div class="col-md-4">
+          <div class="following">
+            <%= link_to "Followings" , following_user_path %>
+            <%= @user.following_users.count %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="follower">
+            <%= link_to "Followers" , follower_user_path %>
+            <%= @user.follower_users.count %>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="microposts">
+            <%= link_to "Microposts" , user_path %>
+            <%= @user.microposts.count %>
+          </div>
+        </div>
+      </div>
+      <p>
+        <%= @user.introduction %>
+      </p>
+      <p>
+        <span class="glyphicon glyphicon-heart" aria-hidden="true"></span><span class="text"><%= @user.age %>歳</span>
+        <span class="glyphicon glyphicon-home" aria-hidden="true"></span><span class="text"><%= @user.area %></span>
+        <%= link_to "[ EDIT ]" , edit_user_path %>
+      </p>
+    </section>

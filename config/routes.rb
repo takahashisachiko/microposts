@@ -14,4 +14,5 @@ Rails.application.routes.draw do
      get :following, on: :member
      get :follower, on: :member
   end
+
 end

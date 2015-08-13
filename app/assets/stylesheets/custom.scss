@@ -40,7 +40,7 @@ h2 {
   font-size: 1.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
-  text-align: center;
+/*  text-align: center; */
   font-weight: normal;
   color: #777;
 }
@@ -93,11 +93,35 @@ input {
 
 /* sidebar */
 
+@media (max-width: 960px) {
+ aside {
+   margin-top: 160px;
+ } 
+}
+
+aside#profile-index {
+  h1 {
+    text-align: left;
+  }
+  .gravatar {
+  float: left;
+  margin-right: 10px;
+  }
+  span {
+    display: block;
+  }
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+
+}
+
 aside {
   section.user_info {
     margin-top: 20px;
   }
-  section {
+    section {
     padding: 10px 0;
     margin-top: 20px;
     &:first-child {
@@ -105,24 +129,18 @@ aside {
       padding-top: 0;
     }
     span {
-      display: block;
       margin-bottom: 3px;
       line-height: 1;
     }
-    h1 {
+  }
+  h1 {
       font-size: 1.4em;
-      text-align: left;
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
     }
-  }
 }
 
-.gravatar {
-  float: left;
-  margin-right: 10px;
-}
 
 .gravatar_edit {
   margin-top: 15px;
@@ -158,13 +176,6 @@ aside {
     float: left;
     margin-right: 10px;
     margin-top: 5px;
-  }
-}
-
-aside {
-  textarea {
-    height: 100px;
-    margin-bottom: 5px;
   }
 }
 
@@ -212,4 +223,57 @@ span.picture {
 
 .user_info p {
   clear: left;
+}
+
+.relation-users {
+  margin-bottom: 30px;
+  
+  .name {
+    font-size: 140%;
+    margin-bottom: 5px;
+  }
+  
+}
+
+.glyphicon-heart {
+  padding-left: 3px;
+}
+  
+.text {
+  padding-left: 6px;
+  padding-right: 18px;
+}
+
+#user_data {
+  margin: 30px 0;
+  
+  .col-md-4 {
+    text-align: center;
+    div {
+      padding: 10px;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      a {
+        padding-right: 10px;
+      }
+    }
+      @media (min-width: 959px) {
+        div {
+          margin: 0 auto;
+          padding-top: 23px;
+          width: 80px;
+          height: 80px;
+          font-size: 90%;
+          border-radius: 100%;
+          a {
+            display: block;
+            margin-bottom: 3px;
+          }
+        }
+      }
+    .following {background: #fcc;}
+    .follower {background: #ffc;}
+    .microposts {background: #ccf;}
+  }
+  
 }

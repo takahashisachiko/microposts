@@ -1,30 +1,6 @@
 <div class="row">
   <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <p>
-          <%= @user.name %>
-          [ <%= link_to "edit" , edit_user_path %> ]
-        </p>
-      </h1>
-      <p>
-        <%= link_to "Following" , following_user_path %> <%= @user.following_users.count %>
-      </p>
-      <p>
-        <%= link_to "Follower" , follower_user_path %> <%= @user.follower_users.count %>
-      </p>
-
-      <p>
-        <%= @user.age %> 歳
-      </p>
-      <p>
-        <%= @user.area %>
-      </p>
-      <p>
-        <%= @user.introduction %>
-      </p>
-    </section>
+    <%= render 'profile' %>
   </aside>
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
